@@ -1,4 +1,4 @@
-package game;
+
 
 import java.util.Scanner;
 import java.lang.Math;
@@ -12,87 +12,87 @@ public class KouSuan {
 		int i = 1;
 		int dan;
 		int choice;
-		int sl;//ÊıÁ¿
+		int sl;//æ•°é‡
 		int num;
 		int pass1 = 1234;
 		int pass2;
 		a = (int)(Math.random() * 10);
 		b = (int)(Math.random() * 10);
-		System.out.println("¡¶¡¶¡¶¿ÚËãÏµÍ³¡·¡·¡·");
-		System.out.println("ÇëÊäÈëÃÜÂë:");
+		System.out.println("ã€Šã€Šã€Šå£ç®—ç³»ç»Ÿã€‹ã€‹ã€‹");
+		System.out.println("è¯·è¾“å…¥å¯†ç :");
 		pass2 = input.nextInt();
 		if(pass1 == pass2)
 		{
-			System.out.println("¹§Ï²ÄãµÇÂ½³É¹¦");
+			System.out.println("æ­å–œä½ ç™»é™†æˆåŠŸ");
 		
 		while(true)
 		{
-		System.out.println("1,¼Ó·¨");
-		System.out.println("2,¼õ·¨");
-		System.out.println("3,³Ë·¨");
-		System.out.println("4,³ı·¨");
-		System.out.println("5,ÍË³öÏµÍ³");
-		System.out.print("ÇëÊäÈëÄãµÄÑ¡Ôñ");
+		System.out.println("1,åŠ æ³•");
+		System.out.println("2,å‡æ³•");
+		System.out.println("3,ä¹˜æ³•");
+		System.out.println("4,é™¤æ³•");
+		System.out.println("5,é€€å‡ºç³»ç»Ÿ");
+		System.out.print("è¯·è¾“å…¥ä½ çš„é€‰æ‹©");
 		choice = input.nextInt();
 		switch(choice)
 		{
 		case 1:
 			num = 0;
 			i = 1;
-			System.out.print("ÇëÊäÈë×öÌâÊıÁ¿:");
+			System.out.print("è¯·è¾“å…¥åšé¢˜æ•°é‡:");
 			sl = input.nextInt();
-			System.out.println("ÄãĞèÒªÍê³É" + sl + "µÀ¼Ó·¨Ìâ");
+			System.out.println("ä½ éœ€è¦å®Œæˆ" + sl + "é“åŠ æ³•é¢˜");
 			while(i <= sl)
 			{
 				
 				a = (int)(Math.random() * 10);
 				b = (int)(Math.random() * 10);
 				System.out.println(a + " + " + b + " = ");
-				System.out.print("ÇëÊäÈë´ğ°¸:");
+				System.out.print("è¯·è¾“å…¥ç­”æ¡ˆ:");
 				dan = input.nextInt();
 				if(dan == (a + b))
 				{
 					System.out.println("********************");
-					System.out.println("¹§Ï²Äã»Ø´ğÕıÈ·");
+					System.out.println("æ­å–œä½ å›ç­”æ­£ç¡®");
 					System.out.println("********************");
 					num ++;
 				}
 				else
 				{
 					System.out.println("********************");
-					System.out.println("ºÜÒÅº¶£¬»Ø´ğ´íÎó");
+					System.out.println("å¾ˆé—æ†¾ï¼Œå›ç­”é”™è¯¯");
 					System.out.println("********************");
-					System.out.println("ÕıÈ·½á¹û:" + a + " + " + b + " = " + (a + b));
+					System.out.println("æ­£ç¡®ç»“æœ:" + a + " + " + b + " = " + (a + b));
 					System.out.println("********************");
 				}
 				
 				i ++;
 				
 			}
-			System.out.println("¹²×öÁË" + sl + "µÀÌâ");
-			System.out.println("´ğ¶Ô" + num + "µÀÌâ´ğ´í" + (sl - num) + "µÀÌâ");
+			System.out.println("å…±åšäº†" + sl + "é“é¢˜");
+			System.out.println("ç­”å¯¹" + num + "é“é¢˜ç­”é”™" + (sl - num) + "é“é¢˜");
 			break;
 		case 2:
 			num = 0;
 			i = 1;
-			System.out.print("ÇëÊäÈë×öÌâÊıÁ¿:");
+			System.out.print("è¯·è¾“å…¥åšé¢˜æ•°é‡:");
 			sl = input.nextInt();
-			System.out.println("ÄãĞèÒªÍê³É" + sl + "µÀ·¨Ìâ");
+			System.out.println("ä½ éœ€è¦å®Œæˆ" + sl + "é“æ³•é¢˜");
 			while(i <= sl)
 			{
-				//System.out.println("ÄãĞèÒªÍê³É3µÀ¼õ·¨Ìâ");
+				//System.out.println("ä½ éœ€è¦å®Œæˆ3é“å‡æ³•é¢˜");
 				a = (int)(Math.random() * 10);
 				b = (int)(Math.random() * 10);
 				
 				if(a > b)
 				{
 					System.out.println(a + " - " + b + " = ");
-					System.out.print("ÇëÊäÈë´ğ°¸:");
+					System.out.print("è¯·è¾“å…¥ç­”æ¡ˆ:");
 					dan = input.nextInt();
 				if(dan == (a - b) )
 				{
 					System.out.println("********************");
-					System.out.println("¹§Ï²Äã»Ø´ğÕıÈ·");
+					System.out.println("æ­å–œä½ å›ç­”æ­£ç¡®");
 					System.out.println("********************");
 					num ++;
 					
@@ -100,9 +100,9 @@ public class KouSuan {
 				else
 				{
 					System.out.println("********************");
-					System.out.println("ºÜÒÅº¶£¬»Ø´ğ´íÎó");
+					System.out.println("å¾ˆé—æ†¾ï¼Œå›ç­”é”™è¯¯");
 					System.out.println("********************");
-					System.out.println("ÕıÈ·½á¹û:" + a + " - " + b + " = " + (a - b));
+					System.out.println("æ­£ç¡®ç»“æœ:" + a + " - " + b + " = " + (a - b));
 					System.out.println("********************");
 				}
 				
@@ -110,73 +110,73 @@ public class KouSuan {
 			}
 				
 			}
-			System.out.println("¹²×öÁË" + sl + "µÀÌâ");
-			System.out.println("´ğ¶Ô" + num + "µÀÌâ´ğ´í" + (sl - num) + "µÀÌâ");
+			System.out.println("å…±åšäº†" + sl + "é“é¢˜");
+			System.out.println("ç­”å¯¹" + num + "é“é¢˜ç­”é”™" + (sl - num) + "é“é¢˜");
 			break;
 		case 3:
 			i = 1;
 			num = 0;
-			System.out.print("ÇëÊäÈë×öÌâÊıÁ¿:");
+			System.out.print("è¯·è¾“å…¥åšé¢˜æ•°é‡:");
 			sl = input.nextInt();
-			System.out.println("ÄãĞèÒªÍê³É" + sl + "µÀ³Ë·¨Ìâ");
+			System.out.println("ä½ éœ€è¦å®Œæˆ" + sl + "é“ä¹˜æ³•é¢˜");
 			while(i <= sl)
 			{
-				//System.out.println("ÄãĞèÒªÍê³É3µÀ³Ë·¨Ìâ");
+				//System.out.println("ä½ éœ€è¦å®Œæˆ3é“ä¹˜æ³•é¢˜");
 				a = (int)(Math.random() * 10);
 				b = (int)(Math.random() * 10);
 				System.out.println(a + " * " + b + " = ");
-				System.out.print("ÇëÊäÈë´ğ°¸:");
+				System.out.print("è¯·è¾“å…¥ç­”æ¡ˆ:");
 				dan = input.nextInt();
 				if(dan == (a * b))
 				{
 					System.out.println("********************");
-					System.out.println("¹§Ï²Äã»Ø´ğÕıÈ·");
+					System.out.println("æ­å–œä½ å›ç­”æ­£ç¡®");
 					System.out.println("********************");
 					num ++;
 				}
 				else
 				{
 					System.out.println("********************");
-					System.out.println("ºÜÒÅº¶£¬»Ø´ğ´íÎó");
+					System.out.println("å¾ˆé—æ†¾ï¼Œå›ç­”é”™è¯¯");
 					System.out.println("********************");
-					System.out.println("ÕıÈ·½á¹û:" + a + " * " + b + " = " + (a * b));
+					System.out.println("æ­£ç¡®ç»“æœ:" + a + " * " + b + " = " + (a * b));
 					System.out.println("********************");
 				}
 				i ++;
 			}
-			System.out.println("¹²×öÁË" + sl + "µÀÌâ");
-			System.out.println("´ğ¶Ô" + num + "µÀÌâ´ğ´í" + (sl - num) + "µÀÌâ");
+			System.out.println("å…±åšäº†" + sl + "é“é¢˜");
+			System.out.println("ç­”å¯¹" + num + "é“é¢˜ç­”é”™" + (sl - num) + "é“é¢˜");
 			break;
 		case 4:
 			i = 1;
 			num = 0;
-			System.out.print("ÇëÊäÈë×öÌâÊıÁ¿:");
+			System.out.print("è¯·è¾“å…¥åšé¢˜æ•°é‡:");
 			sl = input.nextInt();
-			System.out.println("ÄãĞèÒªÍê³É" + sl + "µÀ³ı·¨Ìâ");
+			System.out.println("ä½ éœ€è¦å®Œæˆ" + sl + "é“é™¤æ³•é¢˜");
 			while(i <= sl)
 			{
-				//System.out.println("ÄãĞèÒªÍê³É3µÀ³ı·¨·¨Ìâ");
+				//System.out.println("ä½ éœ€è¦å®Œæˆ3é“é™¤æ³•æ³•é¢˜");
 				a = (int)(Math.random() * 10);
 				b = (int)(Math.random() * 10);
 				
 				if(b != 0 && a > b)
 				{
 					System.out.println(a + " / " + b + " = ");
-					System.out.print("ÇëÊäÈë´ğ°¸:");
+					System.out.print("è¯·è¾“å…¥ç­”æ¡ˆ:");
 					dan = input.nextInt();
 				if(dan == (a / b))
 				{
 					System.out.println("********************");
-					System.out.println("¹§Ï²Äã»Ø´ğÕıÈ·");
+					System.out.println("æ­å–œä½ å›ç­”æ­£ç¡®");
 					System.out.println("********************");
 					num ++;
 				}
 				else
 				{
 					System.out.println("********************");
-					System.out.println("ºÜÒÅº¶£¬»Ø´ğ´íÎó");
+					System.out.println("å¾ˆé—æ†¾ï¼Œå›ç­”é”™è¯¯");
 					System.out.println("********************");
-					System.out.println("ÕıÈ·½á¹û:" + a + " / " + b + " = " + (a / b));
+					System.out.println("æ­£ç¡®ç»“æœ:" + a + " / " + b + " = " + (a / b));
 					System.out.println("********************");
 				}
 				
@@ -184,14 +184,14 @@ public class KouSuan {
 				}
 				
 			}
-			System.out.println("¹²×öÁË" + sl + "µÀÌâ");
-			System.out.println("´ğ¶Ô" + num + "µÀÌâ´ğ´í" + (sl - num) + "µÀÌâ");
+			System.out.println("å…±åšäº†" + sl + "é“é¢˜");
+			System.out.println("ç­”å¯¹" + num + "é“é¢˜ç­”é”™" + (sl - num) + "é“é¢˜");
 			break;
 		case 5:
-			System.out.println("»¶Ó­ÏÂ´ÎÊ¹ÓÃ");
+			System.out.println("æ¬¢è¿ä¸‹æ¬¡ä½¿ç”¨");
 			System.exit(0);
 		default:
-			System.out.println("¸ñÊ½ÊäÈë´íÎó");
+			System.out.println("æ ¼å¼è¾“å…¥é”™è¯¯");
 				
 		
 		}
@@ -201,7 +201,7 @@ public class KouSuan {
   }
 		else
 		{
-			System.out.println("ÃÜÂë´íÎó");
+			System.out.println("å¯†ç é”™è¯¯");
 		}
 	}
 }
